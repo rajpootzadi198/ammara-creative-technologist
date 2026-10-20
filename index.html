@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammara | Creative Technologist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+
+       <!-- Navbar -->
+    <header class="navbar">
+        <a href="#" class="logo">Ammara Developer.</a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation"
+                aria-expanded="false">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#works">Works</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hi, I am Ammara,<br>
+                    Creative Technologist
+                </h1>
+
+                <p>
+                    I am a creative web development student at SMIT.
+                    I enjoy building beautiful websites using HTML
+                    and CSS and creating responsive designs for
+                    mobile, tablet and desktop.
+                </p>
+
+                <a href="#works" class="resume-btn">
+                    Explore My Work
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://www.finetoshine.com/wp-content/uploads/Girls-Dp-Dp-For-Girls-Whatsapp-Dp-For-Girl-Fb-Profile-Pic-For-Girls.jpg"
+                    alt="Profile portrait">
+            </div>
+        </section>
+
+        <!-- Recent Posts -->
+        <section class="recent-posts" id="blog">
+            <div class="section-heading">
+                <h2>Recent posts</h2>
+                <a href="#blog" class="view-all">View all</a>
+            </div>
+
+            <div class="post-container">
+                <article class="post-card">
+                    <h3>Making a design system from scratch</h3>
+
+                    <div class="post-meta">
+                        <span>18 Oct 2026</span>
+                        <span>Design, Pattern</span>
+                    </div>
+
+                    <p>
+                        Discover how I am learning to create
+                        clean layouts, beautiful designs and
+                        modern websites with HTML and CSS.
+                    </p>
+                </article>
+
+                <article class="post-card">
+                    <h3>Creating pixel perfect designs</h3>
+
+                    <div class="post-meta">
+                        <span>18 Oct 2026</span>
+                        <span>Web Design</span>
+                    </div>
+
+                    <p>
+                        Exploring typography, spacing, colors
+                        and responsive layouts to make every
+                        website look professional.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Works -->
+        <section class="featured-works" id="works">
+            <h2>Featured works</h2>
+
+            <article class="work-card">
+                <div class="work-image beauty">
+                    
+                    <span>Beauty Studio</span>
+                </div>
+
+                <div class="work-info">
+                    <h3>Glow Beauty Studio</h3>
+                    <div class="work-meta">
+                        <span class="year">2026</span>
+                        <span>HTML & CSS</span>
+                    </div>
+                    <p>
+                        A modern beauty website with an elegant
+                        layout, attractive colors and responsive
+                        sections.
+                    </p>
+                </div>
+            </article>
+
+              <article class="work-card">
+                <div class="work-image portfolio">
+                    <span>My Portfolio</span>
+                </div>
+
+                <div class="work-info">
+                    <h3>Personal Portfolio</h3>
+                    <div class="work-meta">
+                        <span class="year">2026</span>
+                        <span>Web Development</span>
+                    </div>
+                    <p>
+                        A personal website to showcase my
+                        web development journey and projects.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="social-links">
+            <a href="https://github.com/rajpootzadi198"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+
+        <p>Made with ♥️ by Ammara</p>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuBtn.textContent = isOpen ? "✕" : "☰";
+            menuBtn.setAttribute("aria-expanded", isOpen);
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                menuBtn.textContent = "☰";
+                menuBtn.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
+
+
+</body>
+</html>
